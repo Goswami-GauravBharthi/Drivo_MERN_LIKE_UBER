@@ -6,7 +6,7 @@ import {
 
 export const getCoordinates = async (req, res) => {
   const { address } = req.query;
-  console.log(address);
+ 
   try {
     const coordinates = await getAddressCoordinate(address);
     res.status(200).json(coordinates);
@@ -26,8 +26,7 @@ export const getDistanceTime = async (req, res) => {
     const { origin, destination } = req.query;
 
     const distanceData = await getDistanceAndTime(origin, destination);
-    // console.log("Distance:", (distanceData.distance / 1000).toFixed(2), "km");
-    // console.log("Time:", (distanceData.time / 60).toFixed(1), "minutes");
+
     res.status(200).json(distanceData);
   } catch (error) {
     res.status(404).json({ message: "distance and time not found" });

@@ -18,14 +18,18 @@ function getOtp(length = 4) {
 export const createRide = async (req, res) => {
   const { pickup, destination, vehicleType } = req.body;
 
+ 
   try {
+
     const ride = await createRideService({
-      user: req.user._id,
+      user: req.user?._id,
       pickup,
       destination,
       vehicleType,
       otp: getOtp(),
     });
+
+    
 
     const pickupCoordinate = await getAddressCoordinate(pickup);
     const lat = Number(pickupCoordinate.ltd);

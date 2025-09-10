@@ -46,5 +46,6 @@ export const getFare = async (pickup, destination) => {
 };
 
 export const createRide = async (rideData) => {
+    console.log("all done")
     return await api.post("/ride/create", rideData);
 }

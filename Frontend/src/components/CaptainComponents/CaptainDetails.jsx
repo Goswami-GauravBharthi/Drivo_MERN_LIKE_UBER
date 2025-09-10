@@ -8,9 +8,12 @@ function CaptainDetails() {
     <div>
       <div className="flex justify-between my-5 py-3 text-slate-800">
         <div>
+          
           <h4 className="text-xl font-medium">
-            {captain.fullName.firstName}
-           <br/> {captain.fullName.lastName}
+            Captain: {captain.fullName.firstName} {
+                " "
+            }
+          {captain.fullName.lastName}
           </h4>
         </div>
         <div>

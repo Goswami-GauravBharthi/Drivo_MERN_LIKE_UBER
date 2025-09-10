@@ -73,20 +73,6 @@ function ConfirmRide({
 
       {/* ====================Ride Confirm  Button ==================  */}
       <div className="mt-10">
-        {/* <button
-          onClick={async () => {
-            await createRideFn();
-            setLookingRidePanel(true);
-            setConfirmRidePanel(false);
-          }}
-          className="w-full z-20 bg-green-800 py-2 rounded-lg text-lg font-semibold text-white"
-        >
-          {isLoading && (
-            <span className="inline-block h-4 w-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
-          )}
-          {isLoading ? "Confirming..." : "Confirm"}
-        </button> */}
-
         <button
           onClick={handleConfirm}
           disabled={isLoading}

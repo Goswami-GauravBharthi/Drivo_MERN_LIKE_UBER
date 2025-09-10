@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 
 const CaptainSignUp = () => {
   const { navigate, setCaptain } = useCaptainDataContext();
-  
+
   const handleCaptainSubmit = async (e) => {
     e.preventDefault();
 
@@ -28,22 +28,17 @@ const CaptainSignUp = () => {
       },
     };
 
- 
-
     const res = await captainRegister(captainData);
     if (res.status === 201) {
       const data = res.data;
       setCaptain(data.captain);
       localStorage.setItem("token", data.token);
       navigate("/captain-home");
+    } else {
+      console.log(res.data.errors);
+      // toast.error(res.data.errors[0].msg)
     }
-    else{
-        console.log(res.data.errors)
-        toast.error(res.data.errors[0].msg)
-    }
-
-       e.target.reset();
-
+    e.target.reset();
   };
 
   return (

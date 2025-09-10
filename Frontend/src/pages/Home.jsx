@@ -25,7 +25,7 @@ function Home() {
   const navigate=useNavigate();
 
   useEffect(() => {
-    if (!user.email) return;
+    if (!user?.email) return;
     sendMessage("join", { userType: "user", userId: user?._id });
   }, [user]);
 
@@ -182,7 +182,7 @@ function Home() {
 
   const createRideFn = async () => {
     const res = await createRide({ pickup, destination, vehicleType }); //call the function from api.js
-    // console.log(res.data);
+   
   };
   return (
     <div className="h-screen relative md:max-w-[500px]">

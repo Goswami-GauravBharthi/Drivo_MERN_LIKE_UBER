@@ -27,11 +27,9 @@ function UserLogin() {
 
   return (
     <div className="min-h-screen bg-gray-400/70 flex flex-col gap-5 items-center justify-center px-4">
-      <img
-        src="https://www.freepnglogos.com/uploads/black-uber-logo-png-6.png"
-        alt="Uber Logo"
-        className="w-30 ml-8"
-      />
+      <h2 className="mx-5  rounded-3xl font-bold text-3xl  bg-white px-3 py-1 text-[#5d47bf]">
+        Drivo 🚘
+      </h2>
 
       <div className="w-full max-w-sm bg-white/80 rounded-xl shadow-xl p-6 border border-white/40 text-[#1a1a1a]">
         <h2 className="text-2xl font-bold mb-6 text-center text-[#1a1a1a]">

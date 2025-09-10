@@ -92,6 +92,7 @@ export const getAutoSuggestion = async (input) => {
     throw new Error("Input is required");
   }
 
+
   const API_KEY = process.env.LOCATIONQ_API_KEY;
 
   try {

@@ -22,6 +22,7 @@ export const createCaptain = async ({
   ) {
     throw new Error("All fields are required");
   }
+
   const captain = await Captain.create({
     fullName: {
       firstName,
@@ -36,5 +37,6 @@ export const createCaptain = async ({
       vehicleType,
     },
   });
+  
   return captain;
 };
